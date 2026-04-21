@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A message for you 💜</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins,sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg,#120020,#22003b,#3b0066);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 30px;
+            color: #e9d5ff;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            opacity: .8;
+        }
+
+        /* story sections */
+        .section {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .card {
+            max-width: 650px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 22px;
+            padding: 28px 22px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s ease;
+            box-shadow: 0 15px 40px rgba(0,0,0,.4);
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        p {
+            line-height: 1.9;
+            font-size: 16px;
+        }
+
+        /* ending */
+        .ending {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .ending h2 {
+            color: #e9d5ff;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            opacity: .6;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Intro -->
+    <div class="hero">
+        <h1>Hi 💜</h1>
+        <p>
+            Scroll slowly… this is how i want to describe how's your vibe.
+        </p>
+    </div>
+
+    <!-- Story -->
+
+    <div class="section">
+        <div class="card">
+            <p>
+                <p>
+
+                    I don’t know exactly what vibe you give me, but to be honest, sometimes it feels like peace.
+                    Mostly at night, when I’m peacefully listening to music and talking to you.
+                    Sometimes it even feels like I’m dreaming — but no, I realise it in morning that it wasn't.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="card">
+                <p>
+
+                    Sometimes it feels comforting when I come home after a long day of work.
+                    It almost takes the whole day, so after coming home with a tired brain, I somehow feel comfort when I see your notification.
+                    At that moment, I forget all my tiredness.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="card">
+                <p>
+
+                    Sometimes I feel confused when you talk dumb — but that’s rare, because most of the time I understand everything, even if it takes a little longer.
+                    Sometimes I feel irritated too, but that’s even rarer than your confusing vibe.
+                    I honestly don’t even remember the last time I was irritated with you.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="card">
+                <p>
+
+                    Now, most of the time, it’s just fun.
+                    I like every little thing — roasting others in chat for no reason, talking about other people’s relationships instead of focusing on our own situation, doing dumb stuff, and many more things I don’t want to write because you already know them…
+
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="card">
+                <p>
+
+                    There are many other vibes too, but they’re not that noticeable — and honestly, I probably i am lazy to write everything at once so....
+
+                </p>
+            </div>
+        </div>
+
+        <!-- Ending -->
+        <div class="ending">
+            <h2>You are my purple person 💜</h2>
+            <p>
+                And I just wanted you to know that.
+            </p>
+            <div class="footer">
+                Created by Samarth ✨️
+            </div>
+        </div>
+
+        <script>
+
+            /* Scroll animation */
+            const cards = document.querySelectorAll(".card");
+
+            function reveal() {
+                cards.forEach(card=> {
+                    const top = card.getBoundingClientRect().top;
+                    if (top < window.innerHeight-80) {
+                        card.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", reveal);
+            reveal();
+
+        </script>
+
+    </body>
+</html>
